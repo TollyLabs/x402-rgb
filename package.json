@@ -1,0 +1,50 @@
+{
+  "name": "x402-rgb",
+  "version": "0.1.0",
+  "description": "x402 v2 payments in Bitcoin USDT over RGB: exact (upfront, RGB invoice) and batch-settlement (prepaid vouchers)",
+  "type": "module",
+  "exports": {
+    ".": {
+      "types": "./src/index.d.ts",
+      "default": "./src/index.js"
+    },
+    "./binding": "./src/binding.js",
+    "./voucher": "./src/voucher.js",
+    "./client": "./src/client.js",
+    "./server": "./src/server.js"
+  },
+  "dependencies": {
+    "@noble/curves": "2.4.0",
+    "@noble/hashes": "2.4.0"
+  },
+  "packageManager": "pnpm@10.17.0",
+  "license": "MIT",
+  "scripts": {
+    "test": "node --test test/*.test.js"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "types": "./src/index.d.ts",
+  "keywords": [
+    "x402",
+    "rgb",
+    "bitcoin",
+    "usdt",
+    "payments",
+    "http-402",
+    "stablecoin",
+    "micropayments",
+    "agents"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/TollyLabs/x402-rgb"
+  },
+  "files": [
+    "src",
+    "README.md",
+    "SPEC.md",
+    "LICENSE"
+  ]
+}

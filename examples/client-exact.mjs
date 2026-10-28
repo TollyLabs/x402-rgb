@@ -4,8 +4,8 @@
 import { WalletManager, restoreKeys } from '@utexo/rgb-sdk';
 import { wrapFetch, paymentResponse } from '../src/index.js';
 
-const INDEXER = process.env.INDEXER_URL ?? 'https://esplora-api.utexo.com';
-const TRANSPORT = process.env.TRANSPORT_ENDPOINT ?? 'rpcs://rgb-proxy.utexo.com/json-rpc';
+const INDEXER = process.env.INDEXER_URL ?? 'https://dev.esplora-01.mint.utexo.com';
+const TRANSPORT = process.env.TRANSPORT_ENDPOINT ?? 'rpcs://proxy.iriswallet.com/0.2/json-rpc' // protocol 0.2: what the current RGB kits speak;
 const keys = await restoreKeys('signet', process.env.RGB_MNEMONIC);
 const wallet = new WalletManager({
   xpubVan: keys.accountXpubVanilla, xpubCol: keys.accountXpubColored, masterFingerprint: keys.masterFingerprint,
